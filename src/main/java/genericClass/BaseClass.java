@@ -13,7 +13,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
-
 import PageRepository.HomePage;
 import PageRepository.LoginPage;
 
@@ -22,7 +21,6 @@ public class BaseClass extends WebDriverUtitlity {
 
 	@BeforeSuite
 	public void beforeSuite() {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -70,15 +68,15 @@ public class BaseClass extends WebDriverUtitlity {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		// TODO Auto-generated method stub
+
 		LoginPage login = new LoginPage(driver);
 		login.login();
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-//		LoginPage login=new LoginPage(driver);
-//		login.LogOut();
+		LoginPage login = new LoginPage(driver);
+		login.LogOut();
 
 	}
 

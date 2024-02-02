@@ -109,6 +109,7 @@ public class HomePageTest extends BaseClass {
 	@Test
 	public void imgSave() {
 		HomePage home = new HomePage(driver);
+		mouseHover(home.getImg());
 		home.getSaveButton().click();
 //		Thread.sleep(1000);
 		webDriverWait(driver, home.getSvaedNoti1());
@@ -130,16 +131,22 @@ public class HomePageTest extends BaseClass {
 
 	/**
 	 * verify able to search on search bar by using the text
-	 * @throws InterruptedException 
+	 * 
+	 * @throws InterruptedException
 	 * 
 	 */
 	@Test
 	public void searchText() throws InterruptedException {
-		HomePage home=new HomePage(driver);
+		HomePage home = new HomePage(driver);
+		Thread.sleep(3000);
+		home.getSearchBar().click();
+		Thread.sleep(3000);
 		home.getSearchBar().sendKeys("desinger house");
-		String value="desinger house";
-		soft.assertEquals(home.getSearchedText().getText().equalsIgnoreCase(value), false);
+		home.getSearchBar().sendKeys(Keys.ENTER);
+//		home.getSearchBar().click();
+		String value = "desinger house";
+		soft.assertEquals(home.getSearchedText().getText().equalsIgnoreCase(value), true);
 		soft.assertAll();
-		
+
 	}
 }
