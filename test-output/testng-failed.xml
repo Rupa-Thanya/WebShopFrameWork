@@ -3,19 +3,21 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.ProfessionalPageTest">
+      <class name="testScripts.HomePageTest">
         <methods>
           <include name="afterTest"/>
-          <include name="ratingsCheckBox"/>
           <include name="afterMethod"/>
           <include name="beforeTest"/>
+          <include name="searchText"/>
           <include name="beforeclass"/>
           <include name="beforeSuite"/>
+          <include name="PhotosLinksTest"/>
           <include name="afterClass"/>
           <include name="beforeMethod"/>
+          <include name="imgSave"/>
           <include name="AfterSuite"/>
         </methods>
-      </class> <!-- testScripts.ProfessionalPageTest -->
+      </class> <!-- testScripts.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -10,12 +10,11 @@ public class AdvicePage extends BasePage {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-
 	@FindBy(xpath = "//h1[@class='hz-browse-galleries__header']")
 	private WebElement pageTitle;
-
 	public WebElement getPageTitle() {
 		return pageTitle;
 	}
 
+	
 }

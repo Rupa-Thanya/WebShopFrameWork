@@ -91,14 +91,13 @@ public class HomePage extends BasePage {
 	public WebElement getAdviceLink() {
 		return AdviceLink;
 	}
-
 	@FindBy(xpath = "//button[.='Save']")
 	private WebElement saveButton;
 
+	
 	public WebElement getSaveButton() {
 		return saveButton;
 	}
-
 	@FindBy(xpath = "//span[@class='icon-font icon-heart hz-header__icon--ideabooks']")
 	private WebElement heartIcone;
 
@@ -109,72 +108,61 @@ public class HomePage extends BasePage {
 	public WebElement getHeartIcone() {
 		return heartIcone;
 	}
-
+	
 	@FindBy(partialLinkText = "View All")
 	private WebElement viewALLLink;
 
 	public WebElement getViewALLLink() {
 		return viewALLLink;
 	}
-
 	public By getSvaedNoti1() {
 		return svaedNoti1;
 	}
 
 	@FindBy(xpath = "//div[@class='hz-frictionless-save-toast__details']")
 	private WebElement svaedNoti;
-
-	private By svaedNoti1 = By.xpath("//div[@class='hz-frictionless-save-toast__details']");
+	
+	private By svaedNoti1=By.xpath("//div[@class='hz-frictionless-save-toast__details']");
+			
 
 	public WebElement getSvaedNoti() {
 		return svaedNoti;
 	}
-
-	By footer = By.xpath("//div[@class='hz-compact-footer hz-compact-footer--show']");
-
+	By footer=By.xpath("//div[@class='hz-compact-footer hz-compact-footer--show']");
+	
 	public By getFooter() {
 		return footer;
 	}
 
-	@FindBy(xpath = "//div[@class='hz-compact-footer hz-compact-footer--show']")
+	@FindBy(xpath ="//div[@class='hz-compact-footer hz-compact-footer--show']" )
 	private WebElement footerSection;
 
 	public WebElement getFooterSection() {
 		return footerSection;
 	}
-
+	
 	@FindBy(xpath = "//span[.='See All']")
 	private WebElement seeAll;
 
 	public WebElement getSeeAll() {
 		return seeAll;
 	}
-
+	
 	@FindBy(xpath = "//span[@class='icon-font icon-close ']//preceding-sibling::span")
 	private WebElement searchedText;
 
 	public WebElement getSearchedText() {
 		return searchedText;
 	}
-
-	public By getSearchedText2() {
-		return searchedText2;
-	}
-
-	public WebElement getImg() {
-		return imgs;
-	}
-
-	public By searchedText2 = By.xpath("//span[@class='icon-font icon-close ']//preceding-sibling::span");
-
+	
+	public By searchedText2=By.xpath("//span[@class='icon-font icon-close ']//preceding-sibling::span");
+			
 	@FindBy(xpath = "//input[@placeholder='Search Houzz']")
 	private WebElement searchBar;
 
 	public WebElement getSearchBar() {
 		return searchBar;
 	}
-
-	@FindBy(xpath = "//div[@class='hz-hf-card-photo-container']")
-	private WebElement imgs;
-
+	
+	
 }
