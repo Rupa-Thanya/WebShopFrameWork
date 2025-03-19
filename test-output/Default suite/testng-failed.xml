@@ -6,18 +6,18 @@
       <class name="testScripts.ProfessionalPageTest">
         <methods>
           <include name="afterTest"/>
-          <include name="openingPage"/>
-          <include name="ProfesionalCategoryDropDown"/>
           <include name="afterMethod"/>
-          <include name="beforeTest"/>
           <include name="beforeclass"/>
           <include name="beforeSuite"/>
+          <include name="locationByCity"/>
+          <include name="AfterSuite"/>
+          <include name="ProfesionalCategoryDropDown"/>
+          <include name="openingPage"/>
+          <include name="beforeTest"/>
           <include name="afterClass"/>
           <include name="zipcodeTest"/>
           <include name="beforeMethod"/>
           <include name="locationzipCode"/>
-          <include name="locationByCity"/>
-          <include name="AfterSuite"/>
         </methods>
       </class> <!-- testScripts.ProfessionalPageTest -->
     </classes>

@@ -1,14 +1,11 @@
 package testScripts;
 
-import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import genericClass.BaseClass;
-
-public class Sample extends BaseClass{
+public class Sample{
 	@Test
 	public void rupa() {
-		Reporter.log(driver.getTitle(),true);
+		System.out.println("hello rupa");
 		
 	}
 

@@ -45,13 +45,15 @@ public class BaseClass extends WebDriverUtitlity {
 	@BeforeClass
 	public void beforeclass() {
 		// TODO Auto-generated method stub
-		String browser = FileUtility.getProperty("browser");
+		
+		String bro=(System.getProperty("browser")!=null)?System.getProperty("browser"):FileUtility.getProperty("browser");
+//		String browser = FileUtility.getProperty("browser");
 		String url = FileUtility.getProperty("url");
-		if (browser.contains("Chrome")) {
+		if (bro.contains("Chrome")) {
 
 			driver = new ChromeDriver();
 
-		} else if (browser.equalsIgnoreCase("edge")) {
+		} else if (bro.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
 		} else
 			driver = new ChromeDriver();
