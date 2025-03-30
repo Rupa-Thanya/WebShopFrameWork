@@ -4,7 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       
-      <class name="testScripts.Sample"/>
+      <class name="testScripts.CITet"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

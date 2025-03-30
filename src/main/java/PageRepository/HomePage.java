@@ -163,6 +163,14 @@ public class HomePage extends BasePage {
 	public WebElement getSearchBar() {
 		return searchBar;
 	}
+	@FindBy(xpath = "//span[.='Your Houzz']")
+	private WebElement yourhouzztext;
+
+	public WebElement getYourhouzztext() {
+		return yourhouzztext;
+	}
+
+	
 	
 	
 }

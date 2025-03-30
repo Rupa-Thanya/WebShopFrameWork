@@ -48,7 +48,7 @@ public class BaseClass extends WebDriverUtitlity {
 		
 		String bro=(System.getProperty("browser")!=null)?System.getProperty("browser"):FileUtility.getProperty("browser");
 //		String browser = FileUtility.getProperty("browser");
-		String url = FileUtility.getProperty("url");
+		
 		if (bro.contains("Chrome")) {
 
 			driver = new ChromeDriver();
@@ -60,28 +60,29 @@ public class BaseClass extends WebDriverUtitlity {
 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get(url);
-		initObjects(driver);
+		
 
 	}
 
 	@AfterClass
 	public void afterClass() {
-
+		driver.quit();
 	}
 
 	@BeforeMethod
 	public void beforeMethod() {
 		// TODO Auto-generated method stub
+		String url = FileUtility.getProperty("url");
+		driver.get(url);
+		initObjects(driver);
 		LoginPage login = new LoginPage(driver);
 		login.login();
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-//		LoginPage login=new LoginPage(driver);
-//		login.LogOut();
-
+		LoginPage login = new LoginPage(driver);
+		login.LogOut();
 	}
 
 }
