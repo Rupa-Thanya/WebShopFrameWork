@@ -20,7 +20,7 @@ public class CITet extends BaseClass {
 	}
 	
 
-	@Test(priority = 1)
+	@Test()
 	public void faitetcae() {
 		
 		HomePage home = new HomePage(driver);
