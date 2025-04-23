@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -44,6 +45,9 @@ public class BaseClass extends WebDriverUtitlity {
 
 	@BeforeClass
 	public void beforeclass() {
+		
+		
+		
 		// TODO Auto-generated method stub
 		
 		String bro=(System.getProperty("browser")!=null)?System.getProperty("browser"):FileUtility.getProperty("browser");
@@ -51,7 +55,10 @@ public class BaseClass extends WebDriverUtitlity {
 		
 		if (bro.contains("Chrome")) {
 
-			driver = new ChromeDriver();
+//			driver = new ChromeDriver();
+			
+			ChromeOptions options = new ChromeOptions();
+		 driver = new ChromeDriver(options);
 
 		} else if (bro.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
