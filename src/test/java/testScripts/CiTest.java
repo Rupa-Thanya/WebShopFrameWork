@@ -6,7 +6,7 @@ import org.testng.asserts.SoftAssert;
 import PageRepository.HomePage;
 import genericClass.BaseClass;
 
-public class CITet extends BaseClass {
+public class CiTest extends BaseClass {
 	SoftAssert soft=new SoftAssert();
 	
 	@Test()
