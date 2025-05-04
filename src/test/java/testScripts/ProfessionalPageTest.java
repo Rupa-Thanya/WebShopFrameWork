@@ -16,7 +16,7 @@ import genericClass.FileUtility;
 public class ProfessionalPageTest extends BaseClass {
 	SoftAssert soft = new SoftAssert();
 
-	
+	@Test
 	public void openingPage() {
 		HomePage home = new HomePage(driver);
 		FindProfesionalPage pro=new FindProfesionalPage(driver);
@@ -24,7 +24,7 @@ public class ProfessionalPageTest extends BaseClass {
 		soft.assertEquals(true, pro.getTitle().isDisplayed());
 		soft.assertAll();
 	}
-
+@Test
 	public void zipcodeTest() {
 		HomePage home = new HomePage(driver);
 		FindProfesionalPage pro=new FindProfesionalPage(driver);

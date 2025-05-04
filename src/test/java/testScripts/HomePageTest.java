@@ -134,6 +134,7 @@ public class HomePageTest extends BaseClass {
 	 * 
 	 */
 
+	@Test
 	public void searchText() throws InterruptedException {
 		HomePage home=new HomePage(driver);
 		home.getSearchBar().sendKeys("desinger house");
